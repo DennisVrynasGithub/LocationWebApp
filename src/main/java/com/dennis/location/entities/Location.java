@@ -3,14 +3,17 @@ package com.dennis.location.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+// @Entity το χρησιμοποιούμε γιατί είναι πίνακας
+// Αν ο πίνακας στη βάση δεν ειχε το ίδιο όνομα τότε θα βάζαμε @Table(name="")
 @Entity
 public class Location {
 
+	// @Id γιατί  είναι πρωτεύον κλειδί
 	@Id
 	private int id;
-	private String code;
-	private String name;
-	private String type;
+	private String code; // Το αφήνουμε όπως είναι
+	private String name; // Αν δεν είχε το ίδιο όνομα
+	private String type; // θα βάζαμε @Column(name="")
 	
 	public int getId() {
 		return id;

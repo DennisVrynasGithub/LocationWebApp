@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 import com.dennis.location.entities.Location;
 import com.dennis.location.repos.Locationepository;
 
-
+// Βάζουμε το @Service για να το χρησιμοποιήσουμε στη main 
 @Service
 public class LocationServiceImpl implements LocationServices {
 
+	// Χρησιμοποιούμε το @Autowired για να μην το βάλουμε στη main
 	@Autowired
 	private Locationepository repo;
 	
